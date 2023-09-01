@@ -1,0 +1,16 @@
+dec fatorialBase : num # num -> num;
+dec fatorial : num -> num;
+dec fiboBase : num # num # num -> num;
+dec fibonacci : num -> num;
+
+--- fatorialBase (0, x) <= x;
+--- fatorialBase (n, x) <= fatorialBase (n - 1, n * x);
+
+--- fatorial n <= fatorialBase (n, 1);
+
+--- fiboBase (0, a, b) <= a;
+--- fiboBase (1, a, b) <= b;
+--- fiboBase (2, a, b) <= b + a;
+--- fiboBase (n, a, b) <= fiboBase (n - 1, b, b + a);
+
+--- fibonacci n <= fiboBase (n, 0, 1);
